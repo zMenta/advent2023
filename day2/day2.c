@@ -82,8 +82,9 @@ int main(void){
 		}while (text[i] != '\0');
 
 		// Validate if the current game is valid
-		if (green_sum < max_green && red_sum < max_red && blue_sum < max_blue) {
+		if (green_sum <= max_green && red_sum <= max_red && blue_sum <= max_blue) {
 			valid_games_sum += atoi(game_str);
+			printf("Valid!\n");
 		}
 		printf("Game number: %d | red: %d | green: %d | blue: %d\n\n", atoi(game_str), red_sum, green_sum, blue_sum);
 	}
